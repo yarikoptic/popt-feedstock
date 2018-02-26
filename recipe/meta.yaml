@@ -15,16 +15,16 @@ source:
     - 0002-added-sanity-autotest.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - toolchain
-    - libiconv
+    - libiconv 1.15
     - perl 5.22.2.1
   run:
-    - libiconv
+    - libiconv 1.15
 
 test:
   commands:
@@ -44,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - notestaff
+    - sodre
