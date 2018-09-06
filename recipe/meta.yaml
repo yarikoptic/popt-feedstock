@@ -15,16 +15,18 @@ source:
     - 0002-added-sanity-autotest.patch
 
 build:
-  number: 1
+  number: 1001
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
-    - libiconv 1.15
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - libiconv
     - perl
   run:
-    - libiconv 1.15
+    - libiconv
 
 test:
   commands:
